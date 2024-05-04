@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blank Page</title>
+  <title>Activation Page</title>
   <style>
     /* Add container styles */
 .container {
@@ -98,7 +98,7 @@
     
     <h1>Enter the 8-digit code you see on <br>your TV to continue</h1>
     <div class="code-input">
-      <input type="text" pattern="" title="Enter 8 digits separated by a hyphen (-)" placeholder="_ _ _ _ - _ _ _ _" maxlength="9">
+      <input type="text" pattern="[0-9]{4}-[0-9]{4}" title="Enter 8 digits separated by a hyphen (-)" placeholder="_ _ _ _ - _ _ _ _" maxlength="9">
       <button type="submit">Enter Code to Continue</button>
       <p class="sign-up"><strong>Need help?</strong></p>
     </div>
