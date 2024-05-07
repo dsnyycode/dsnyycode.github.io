@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activation in Process</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000000; /* Black background */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
+    .containerlogo {
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+        border-radius: 10px;
+        width: 90%;
+        max-width: 400px;
+        margin-top: 10px;
+    }
+    .logo {
+        width: 250px;
+        display: block;
+        margin: 0 auto 0px; /* Logo at the top center */
+    }
+    .container {
+        text-align: center;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+        border-radius: 10px;
+        width: 90%;
+        max-width: 400px;
+        margin-top: 0px;
+    }
+    h2 {
+        color: #ffffff; /* White color text */
+        margin: 20px 0;
+    }
+    .progress-bar {
+        width: 100%;
+        background-color: #ddd;
+        padding: 3px;
+        border-radius: 10px;
+        margin: 20px 0;
+    }
+    .progress-bar-fill {
+        height: 20px;
+        width: 0%;
+        background-color: #FFA500;
+        border-radius: 8px;
+        text-align: center;
+        line-height: 20px;
+        color: white;
+    }
+</style>
+</head>
+<body>
+<div class="containerlogo">
+    <img src="logo.png" alt="Logo" class="logo"> <!-- Place your logo here -->
+</div>
+<div class="container">
+    <h2>Activating</h2>
+    <div class="progress-bar">
+        <div class="progress-bar-fill" id="progressFill">0%</div>
+    </div>
+</div>
+
+<script>
+    // Example JavaScript to simulate progress
+    let progress = 0;
+    const interval = setInterval(() => {
+        if(progress >= 99) {
+            clearInterval(interval);
+            window.location.href = 'completed.php'; // Redirect to completed.php
+        }
+        progress++;
+        document.getElementById('progressFill').style.width = progress + '%';
+        document.getElementById('progressFill').innerText = progress + '%';
+    }, 100); // Update progress every 100 milliseconds
+</script>
+
+</body>
+</html>
