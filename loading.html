@@ -78,7 +78,7 @@
     const interval = setInterval(() => {
         if(progress >= 99) {
             clearInterval(interval);
-            window.location.href = 'completed.php'; // Redirect to completed.php
+            window.location.href = 'completed.html'; // Redirect to completed.php
         }
         progress++;
         document.getElementById('progressFill').style.width = progress + '%';
